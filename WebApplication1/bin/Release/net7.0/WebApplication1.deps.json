@@ -1,0 +1,34 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "WebApplication1/1.0.0": {
+        "dependencies": {
+          "Microsoft.NET.Build.Containers": "7.0.304"
+        },
+        "runtime": {
+          "WebApplication1.dll": {}
+        }
+      },
+      "Microsoft.NET.Build.Containers/7.0.304": {}
+    }
+  },
+  "libraries": {
+    "WebApplication1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NET.Build.Containers/7.0.304": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EK41tfcKMGatU6e1u+9igDq+hUrKLthhFn6dEF2QA7S8t2LKI/2e7rGcndEbplOY9eDqVLEF1XzqncrMuyW7RQ==",
+      "path": "microsoft.net.build.containers/7.0.304",
+      "hashPath": "microsoft.net.build.containers.7.0.304.nupkg.sha512"
+    }
+  }
+}

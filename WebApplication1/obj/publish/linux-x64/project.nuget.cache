@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Tk1Boh5cQCLE1Z6INTZtPUK+VKbJ4XQwKfPxBJUg8Ey0eCHEIJhFtn8R272XFfRb8+SboANknKWnAfedey3DcA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\saya3871\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\saya3871\\.nuget\\packages\\microsoft.net.build.containers\\7.0.304\\microsoft.net.build.containers.7.0.304.nupkg.sha512",
+    "C:\\Users\\saya3871\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\7.0.7\\microsoft.netcore.app.runtime.linux-x64.7.0.7.nupkg.sha512",
+    "C:\\Users\\saya3871\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\7.0.7\\microsoft.aspnetcore.app.runtime.linux-x64.7.0.7.nupkg.sha512",
+    "C:\\Users\\saya3871\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\7.0.7\\microsoft.netcore.app.host.linux-x64.7.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}
