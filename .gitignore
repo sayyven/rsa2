@@ -3,3 +3,4 @@
 *terraform/providers/registry.terraform.io/hashicorp/azurerm/
 *.exe
 .terraform/
+.terraform/
