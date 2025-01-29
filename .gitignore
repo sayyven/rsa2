@@ -4,3 +4,6 @@
 *.exe
 .terraform/
 .terraform/
+.tfstate
+*.tfstate.backup
+.plan
