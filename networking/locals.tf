@@ -1,3 +1,23 @@
+locals {
+  
+  networksecuritygroup_rules = [
+    {
+        priority= 100
+        destination_port_range = 443
+        access                      = "Allow"
+        protocol                    = "Tcp"
+    },
+
+  {
+        priority= 200
+        destination_port_range =  "*"
+        access                      = "Allow"
+        protocol                    = "*"
+    }
+  
+   ]
+}
+
 /*
 
 locals {

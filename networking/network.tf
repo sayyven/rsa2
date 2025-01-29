@@ -56,11 +56,35 @@ resource "azurerm_network_security_group" "nsg_apps" {
   resource_group_name = var.rgname
   depends_on = [ azurerm_subnet.app_subnet ]
 
-}
 
-# Allow traffic from Bastion subnet to apps
+
+
+# Allow traffic from Bastion subnet to apps and Deny all other inbound traffic
+#using dynamic blocks used in locals to achieve this
+
+
+dynamic security_rule{
+    for_each=local.networksecuritygroup_rules
+    content {
+      name = "Allow-${security_rule.value.destination_port_range}"
+      priority= security_rule.value.priority
+      destination_port_range = security_rule.value.destination_port_range
+      direction                   = "Inbound"
+      access                      = security_rule.value.access
+      protocol                    = security_rule.value.protocol
+      destination_address_prefix  = "*"
+      source_address_prefix       = "*"
+      source_port_range           = "*"
+      
+    }
+}
+}
+/*
+
 resource "azurerm_network_security_rule" "allow_bastion_to_apps" {
   resource_group_name = var.rgname
+}
+
   name                        = "Allow-Bastion-To-Apps"
   priority                    = 100
   direction                   = "Inbound"
@@ -74,7 +98,7 @@ resource "azurerm_network_security_rule" "allow_bastion_to_apps" {
   depends_on = [ azurerm_network_security_group.nsg_apps ]
 }
 
-# Deny all other inbound traffic
+
 resource "azurerm_network_security_rule" "deny_all_inbound" {
   resource_group_name = var.rgname
   name                        = "Deny-All-Inbound"
@@ -89,6 +113,9 @@ resource "azurerm_network_security_rule" "deny_all_inbound" {
   network_security_group_name = azurerm_network_security_group.nsg_apps.name
   depends_on = [ azurerm_network_security_group.nsg_apps ]
 }
+
+*/
+
 # Associate NSG with App Subnet
 resource "azurerm_subnet_network_security_group_association" "app_subnet_nsg" {
   subnet_id                 = azurerm_subnet.app_subnet.id
